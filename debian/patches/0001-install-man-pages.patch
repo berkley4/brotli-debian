@@ -1,0 +1,28 @@
+From 741610efd335a8b6ff9be4c9bed643e0a74fdb6a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tomasz=20K=C5=82oczko?= <kloczek@github.com>
+Date: Thu, 31 Aug 2023 08:47:47 +0000
+Subject: [PATCH] install man pages
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+cmake modyfication to install man pages.
+
+Signed-off-by: Tomasz Kłoczko <kloczek@github.com>
+---
+ CMakeLists.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -359,6 +359,10 @@
+     DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
+ endif()  # BROTLI_BUNDLED_MODE
+ 
++INSTALL(FILES "docs/brotli.1" DESTINATION "${SHARE_INSTALL_PREFIX}/man/man1")
++INSTALL(FILES docs/constants.h.3 docs/decode.h.3 docs/encode.h.3 docs/types.h.3
++  DESTINATION "${SHARE_INSTALL_PREFIX}/man/man3")
++
+ if (ENABLE_COVERAGE STREQUAL "yes")
+   SETUP_TARGET_FOR_COVERAGE(coverage test coverage)
+ endif ()
