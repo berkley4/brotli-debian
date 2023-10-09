@@ -1,3 +1,23 @@
+brotli (1.1.0-stable1) stable; urgency=medium
+
+  * Non-maintainer release
+  * Drop obsolete patches
+    - Drop 0001-remove-missing-test-files-reference.patch
+    - Drop 838.patch
+  * Add upstream manpage patch
+    - Add 0001-install-man-pages.patch
+  * Re-work install file to omit non-existing /usr/lib/*/*.a files
+    - Stop invoking debian/rename-static-libs.sh
+  * Install manpages as below
+    - man/man1/brotli.1
+    - man/man3/constants.h.3
+    - man/man3/decode.h.3
+    - man/man3/encode.h.3
+    - man/man3/types.h.3
+  * Update libbrotli1.symbols
+
+ -- berkley4 <jeffblake0@gmail.com>  Mon, 09 Oct 2023 06:02:46 +0100
+
 brotli (1.0.9-2) unstable; urgency=medium
 
   * Team Upload
