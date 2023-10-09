@@ -1,1 +1,6 @@
-docs/brotli.1
+#docs/brotli.1
+man/man1/brotli.1
+man/man3/constants.h.3
+man/man3/decode.h.3
+man/man3/encode.h.3
+man/man3/types.h.3
